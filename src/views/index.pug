@@ -1,0 +1,116 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Uriel Olvera
+    link(rel="stylesheet", href="styles/style.css")
+  body 
+    nav
+      label.toggle-menu(for="toggle-menu-btn")
+        img(height="50px", width="50px", src="img/menu.svg", alt="") 
+      input.toggle-menu(type="checkbox", id="toggle-menu-btn")
+      //- .nav-item-container
+      a.nav-item(href="#home") Home
+        //- img(height="40px", width="40px", src="img/home.svg", alt="")
+      div 
+        a.nav-item(href="#about") About
+        a.nav-item(href="#projects") Projects
+        a.nav-item(href="#contact") Contact 
+      
+main 
+  section#home
+    img.profile-img(src="img/uriel_ia02.2.png", alt="Uriel_ia")
+    .main-container
+      h1.title
+        | Uriel 
+        span Olvera
+    span.subtitle Backend Developer
+    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In reiciendis numquam ea. Cumque, possimus eius, itaque, libero eos officia maxime voluptatem cum omnis officiis laboriosam corrupti non sapiente beatae hic?
+  section#about 
+    //- h1 About me 
+    .grid.col-2.col-sm-1 
+      div 
+        h1 My Skills 
+        .box.grid.col-3.col-sm-2
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/elixir.svg", alt="Elixir")
+            .tooltip-text Elixir
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/phoenix.svg", alt="Phoenix")
+            .tooltip-text Phoenix
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/mssql.svg", alt="MSSQL")
+            .tooltip-text MSSQL
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/javascript-1.svg", alt="JavaScript")
+            .tooltip-text JavaScript
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/html-1.svg", alt="HTML")
+            .tooltip-text HTML
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/css-1.svg", alt="CSS")
+            .tooltip-text CSS
+
+      div 
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, magnam cupiditate! Ea temporibus voluptates facilis id vel! Molestiae, repellat, rem officia quis maiores nisi doloribus aperiam alias, facilis cumque maxime dolor deleniti sit cum ad voluptatum recusandae nam quisquam assumenda id a. Eum, illum culpa in nam sed voluptatum! Consectetur!
+        br
+        a.btn(target="_blank", href="CV.pdf") Download CV              
+  //- section
+  section#projects
+    h1 Projects 
+    .wrapper 
+      .carousel 
+        a.card(target="_blank" href="#") 
+          img.card-img(src="https://images.unsplash.com/photo-1683189400209-a076d6c375b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80", alt="", draggable="false")
+          .card-content
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, accusantium! Facilis laudantium doloribus nemo veniam ex repellat quod placeat accusantium.
+          .card-foot
+            h3.card-title Lorem, ipsum dolor.
+        a.card(target="_blank" href="#")  
+          img.card-img(src="https://images.unsplash.com/photo-1683189238039-173f232b2338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", alt="", draggable="false")
+          .card-content
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, accusantium! Facilis laudantium doloribus nemo veniam ex repellat quod placeat accusantium.
+          .card-foot
+            h3.card-title Lorem, ipsum dolor.
+        a.card(target="_blank" href="#")  
+          img.card-img(src="https://images.unsplash.com/photo-1683144298844-a2128e48883a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", alt="", draggable="false")
+          .card-content
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, accusantium! Facilis laudantium doloribus nemo veniam ex repellat quod placeat accusantium.
+          .card-foot
+            h3.card-title Lorem, ipsum dolor.
+        a.card(target="_blank" href="#")  
+          img.card-img(src="https://images.unsplash.com/photo-1684690640456-381bc7183e86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80", alt="", draggable="false")
+          .card-content
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, accusantium! Facilis laudantium doloribus nemo veniam ex repellat quod placeat accusantium.
+          .card-foot
+            h3.card-title Lorem, ipsum dolor.
+      i#left.btn.rounded 
+        img(height="30px", width="30px", src="img/left.svg")
+      i#right.btn.rounded
+        img(height="30px", width="30px", src="img/right.svg")
+  section#contact
+    .grid.col-2.col-sm-1 
+      h1 Contact
+      .form-contact  
+        form
+          label(for="email") Email
+          input#email(placeholder="you@domain.com" type="email") 
+          label(for="name") Name
+          input#name(placeholder="Enter your name" type="text") 
+          label(for="msg") Message
+          textarea#msg(placeholder="Enter your message", cols="30", rows="10")
+          input.btn.block(type="submit", value="Send")
+footer 
+      .foot-socialnet
+        a(target="_blank" href="https://github.com/UrielOlvera") 
+          img(height="20px", width="20px", src="img/github.svg", alt="")
+        a(target="_blank" href="https://www.linkedin.com/in/uriel-olvera/") 
+          img(height="20px", width="20px", src="img/linkedin.svg", alt="")
+        a(target="_blank" href="https://twitter.com/uriel_a23") 
+          img(height="20px", width="20px", src="img/twitter.svg", alt="")
+        a(target="_blank" href="https://www.instagram.com/uriel23.alex/") 
+          img(height="20px", width="20px", src="img/instagram.svg", alt="")
+      p © 2022-presente Uriel Olvera. Todos los derechos reservados.
+  script(src="js/carousel.js") 
