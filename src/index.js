@@ -3,11 +3,11 @@ const app = express()
 const path = require('path')
 const router = express.Router()
 
-const port = 3001
+const port = 3000
 
 app.set("view engine", "pug")
-app.set("views", path.join(__dirname, "src/views"));
-app.use(express.static(__dirname + '/src/assets'));
+app.set("views", path.join(__dirname, "/views"));
+app.use(express.static(__dirname + '/assets'));
 
 router.get('/', (req, res) => {
   res.render("index")

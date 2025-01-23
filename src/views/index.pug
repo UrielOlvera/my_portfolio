@@ -7,18 +7,14 @@ html(lang="en")
     title Uriel Olvera
     link(rel="stylesheet", href="styles/style.css")
   body 
-    nav
-      label.toggle-menu(for="toggle-menu-btn")
-        img(height="50px", width="50px", src="img/menu.svg", alt="") 
-      input.toggle-menu(type="checkbox", id="toggle-menu-btn")
-      //- .nav-item-container
+    .toggle-menu
+      img.menu-btn.show(height="40px", width="40px", src="img/menu.svg", alt="") 
+      img.cancel-btn(height="40px", width="40px", src="img/cancel.svg", alt="") 
+    nav 
       a.nav-item(href="#home") Home
-        //- img(height="40px", width="40px", src="img/home.svg", alt="")
-      div 
-        a.nav-item(href="#about") About
-        a.nav-item(href="#projects") Projects
-        a.nav-item(href="#contact") Contact 
-      
+      a.nav-item(href="#about") About
+      a.nav-item(href="#projects") Projects
+      a.nav-item(href="#contact") Contact 
 main 
   section#home
     img.profile-img(src="img/uriel_ia02.2.png", alt="Uriel_ia")
@@ -52,6 +48,15 @@ main
           .tooltip 
             img.box-item(height="100px", width="100px", src="img/css-1.svg", alt="CSS")
             .tooltip-text CSS
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/java.svg", alt="Java")
+            .tooltip-text Java
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/spring.svg", alt="Spring")
+            .tooltip-text Spring
+          .tooltip 
+            img.box-item(height="100px", width="100px", src="img/docker.svg", alt="Docker")
+            .tooltip-text Docker
 
       div 
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, magnam cupiditate! Ea temporibus voluptates facilis id vel! Molestiae, repellat, rem officia quis maiores nisi doloribus aperiam alias, facilis cumque maxime dolor deleniti sit cum ad voluptatum recusandae nam quisquam assumenda id a. Eum, illum culpa in nam sed voluptatum! Consectetur!
@@ -93,15 +98,14 @@ main
   section#contact
     .grid.col-2.col-sm-1 
       h1 Contact
-      .form-contact  
-        form
-          label(for="email") Email
-          input#email(placeholder="you@domain.com" type="email") 
-          label(for="name") Name
-          input#name(placeholder="Enter your name" type="text") 
-          label(for="msg") Message
-          textarea#msg(placeholder="Enter your message", cols="30", rows="10")
-          input.btn.block(type="submit", value="Send")
+      form#form-contact 
+        label(for="email") Email
+        input#email(placeholder="you@domain.com" type="email") 
+        label(for="name") Name
+        input#name(placeholder="Enter your name" type="text") 
+        label(for="msg") Message
+        textarea#msg(placeholder="Enter your message", cols="30", rows="10")
+        input.btn.block(type="submit", value="Send")
 footer 
       .foot-socialnet
         a(target="_blank" href="https://github.com/UrielOlvera") 
@@ -114,3 +118,5 @@ footer
           img(height="20px", width="20px", src="img/instagram.svg", alt="")
       p © 2022-presente Uriel Olvera. Todos los derechos reservados.
 script(src="js/carousel.js") 
+script(src="js/nav.js") 
+script(src="js/mailer.js") 
